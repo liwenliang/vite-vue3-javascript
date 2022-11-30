@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-let btnText = ref('HomeIndex')
-let value= ref(false)
+const btnText = ref('HomeIndex')
+const value = ref(false)
 </script>
 
 <style lang="scss" scoped>
