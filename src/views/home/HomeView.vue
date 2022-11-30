@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button type="primary">{{btnText}}</el-button>
+    <el-button type="primary">{{ btnText }}</el-button>
     <el-switch v-model="value" />
     <div class="redClass">Hello Home</div>
     <div class="text-green-600 font-bold">windicss</div>
@@ -14,11 +14,11 @@ const value = ref(false)
 
 <style lang="scss" scoped>
 .redClass {
-  background: blue;
-  color: red;
   width: 120px;
   height: 120px;
+  color: red;
   line-height: 120px;
   text-align: center;
+  background: blue;
 }
 </style>

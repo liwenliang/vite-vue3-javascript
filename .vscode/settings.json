@@ -3,8 +3,10 @@
   "files.autoSave": "afterDelay",
   // 文件：文件保存机制：暂停输入3000毫秒即保存
   "files.autoSaveDelay": 3000,
+  // stylelint保存即格式化
+  "stylelint.autoFixOnSave": true,
   // 编辑器：保存即格式化
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // 关闭编辑器对 js 文件的格式化，交给 ESLint 来做格式化，否则会格式化两次
   "[javascript]": {
     "editor.formatOnSave": false
