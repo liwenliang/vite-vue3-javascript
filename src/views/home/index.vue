@@ -2,6 +2,7 @@
   <div>
     <el-button type="primary">{{btnText}}</el-button>
     <el-switch v-model="value" />
+    <div class="redClass">Hello Home</div>
   </div>
 </template>
 
@@ -10,5 +11,13 @@ let btnText = ref('HomeIndex')
 let value= ref(false)
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.redClass {
+  background: blue;
+  color: red;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+}
 </style>
