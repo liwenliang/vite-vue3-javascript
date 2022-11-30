@@ -1,24 +1,30 @@
 <template>
-  <div>
-    <el-button type="primary">{{ btnText }}</el-button>
-    <el-switch v-model="value" />
-    <div class="redClass">Hello Home</div>
-    <div class="text-green-600 font-bold">windicss</div>
+  <div class="flex justify-center">
+    <a href="https://vitejs.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="../../assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
   </div>
+  <HelloWorld msg="Vite + Vue + Pinia + windicss" />
 </template>
 
 <script setup>
-const btnText = ref('HomeIndex')
-const value = ref(false)
 </script>
 
-<style lang="scss" scoped>
-.redClass {
-  width: 120px;
-  height: 120px;
-  color: red;
-  line-height: 120px;
-  text-align: center;
-  background: blue;
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
