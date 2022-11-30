@@ -1,11 +1,21 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
     base: './',
     plugins: [
       vue(),
+      AutoImport({
+        imports:['vue'], // 自动引入vue3
+      }),
+      Components({
+        dirs: ['src/components'], // 配置需要默认导入的自定义组件文件夹，该文件夹下的所有组件都会自动 import
+        resolvers: [ElementPlusResolver()], // 有了这个 main.js里也不需要引入了
+      }),
     ],
     resolve: {
       alias: {

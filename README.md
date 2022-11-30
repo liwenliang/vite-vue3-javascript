@@ -36,3 +36,21 @@
 1. 使用 unplugin-vue-components 和 unplugin-auto-import 来实现自动导入：
 2. 这样做的好处是我们不用再import特别多的重复的语法
 3. 但是也有一个弊端就是不利于我么理解代码逻辑,所以我们订立一个约定: 公共组件和vue按需引入, 业务相关组件还是要手动引入.
+
+```js
+# vite.config.js
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+
+
+plugins: [
+  AutoImport({
+    imports:['vue'], // 自动引入vue3
+  }),
+  Components({
+    dirs: ['src/components'], // 配置需要默认导入的自定义组件文件夹，该文件夹下的所有组件都会自动 import
+    resolvers: [ElementPlusResolver()],
+  }),
+],
+```
