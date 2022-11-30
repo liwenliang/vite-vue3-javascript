@@ -3,6 +3,7 @@
     <el-button type="primary">{{btnText}}</el-button>
     <el-switch v-model="value" />
     <div class="redClass">Hello Home</div>
+    <div class="text-green-600 font-bold">windicss</div>
   </div>
 </template>
 
