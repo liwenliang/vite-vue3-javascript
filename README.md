@@ -27,22 +27,42 @@
     ├── views/                     // 页面组件目录
     ├── App.vue
     ├── main.js
-├── tests/                         // 单元测试目录
 ├── index.html
-├── jsconfig.json                  // JavaScript 配置文件
+├── .editorconfig                  // 编辑器配置文件
+├── .eslintrc-auto-import.json     // 自动导入插件生成的eslint忽略规则
+└── .eslintrc.js                   // eslint规则文件
+├── .gitignore                     // 项目忽略的文件
+├── index.html                     // index模板文件
+├── stylelint.config.js            // stylelint规则文件
 ├── vite.config.js                 // Vite 配置文件
 └── package.json
 ```
+## 集成 vite 
+
+### 下一代的前端工具链
+> https://cn.vitejs.dev/
+
 ## 集成 Vue Router 路由工具
 
-使用vue Router 4.x 作为路由管理工具
+### Vue.js 的官方路由
+> 使用vue Router 4.x 作为路由管理工具
+> https://router.vuejs.org/zh/index.html
 
 ## 集成 Pinia 全局状态管理工具
 
-使用pinia作为全局状态管理工具,更小更易用
+> 使用pinia作为全局状态管理工具,更小更易用
+> https://pinia.vuejs.org/zh/index.html
 ## 集成 ElementPlus 组件库
 
 > https://element-plus.gitee.io/zh-CN/guide/installation.html
+
+## 集成eslint
+> https://zh-hans.eslint.org/
+
+## 集成stylelint
+> stylelint这里有点需要注意的地方,自动格式化css代码,用到了stylelint-plus这个插件,如果你的样式无法自动格式化,可以试试这个插件
+
+> https://stylelint.io/
 
 
 
