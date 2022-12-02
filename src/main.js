@@ -5,7 +5,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 增加多语言支持
+import i18n from './lang'
+
 // 这里是demo
 import './style/style.css'
 
-createApp(App).use(router).use(store).mount('#app')
+createApp(App)
+  .use(router)
+  .use(store)
+  .use(i18n)
+  .mount('#app')
