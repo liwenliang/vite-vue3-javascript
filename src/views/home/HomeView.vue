@@ -1,30 +1,20 @@
 <template>
-  <div class="flex justify-center">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+  <div class="flex justify-center gap-x-[48px]">
+    <a class="logo" href="https://vitejs.dev" target="_blank">
+      <SvgIcon name="vite" />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="../../assets/vue.svg" class="logo vue" alt="Vue logo" />
+    <a class="logo" href="https://vuejs.org/" target="_blank">
+      <svg-icon class="vue" name="vue" />
+    </a>
+    <a class="logo" href="https://github.com/vbenjs/vite-plugin-svg-icons/blob/main/README.zh_CN.md" target="_blank">
+      <SvgIcon name="svg-icon" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue + Pinia + windicss" />
+  <HelloWorld msg="Vite + Vue + Pinia + windicss + SvgIcon" />
 </template>
 
-<script setup>
-</script>
-
-<style scoped>
+<style lang="scss" scoped>
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+  font-size: 68px;
 }
 </style>

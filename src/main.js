@@ -12,12 +12,10 @@ import i18n from './lang'
 import './style/style.css'
 
 // svg icon
-import svgIcon from "@/components/SvgIcon/index.vue";
 import 'virtual:svg-icons-register'
 
 createApp(App)
   .use(router)
   .use(store)
   .use(i18n)
-  .component('SvgIcon', svgIcon)
   .mount('#app')
