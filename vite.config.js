@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { viteMockServe } from 'vite-plugin-mock'
 
 export default defineConfig({
   base: './',
@@ -30,7 +31,7 @@ export default defineConfig({
       // 指定需要缓存的图标文件夹
       iconDirs: [resolve(process.cwd(), 'src/icons')],
       // 指定symbolId格式
-      symbolId: 'icon-[dir]-[name]',
+      symbolId: 'icon-[dir]-[name]'
 
       /**
        * 自定义插入位置
@@ -44,6 +45,10 @@ export default defineConfig({
        */
       // customDomId: '__svg__icons__dom__',
     }),
+    viteMockServe({
+      mockPath: './src/mock/source', // 解析，路径可根据实际变动
+      localEnabled: true // 本地开发启用mock
+    })
   ],
   resolve: {
     alias: {
