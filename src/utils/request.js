@@ -4,7 +4,7 @@ import axios from 'axios'
 const instance = axios.create({
   baseURL: '/',
   // 指定请求超时的毫秒数
-  timeout: 1000,
+  timeout: 30000,
   // 表示跨域请求时是否需要使用凭证
   withCredentials: false
 })

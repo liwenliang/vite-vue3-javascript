@@ -1,20 +1,17 @@
 <template>
   <div>AboutIndex</div>
+  <h1>{{ count }}</h1>
 </template>
 
-<script>
-export default {
-  components: {},
-  props: {},
-  data () {
-    return {}
-  },
-  computed: {},
-  watch: {},
-  created () {},
-  mounted () {},
-  methods: {}
-}
+<script setup>
+import { storeToRefs } from 'pinia'
+import { useCounterStore } from '@/store/modules/counter'
+const countStore = useCounterStore()
+const { count } = storeToRefs(countStore)
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+h1 {
+  color: red;
+}
+</style>

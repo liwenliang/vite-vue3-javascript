@@ -11,7 +11,17 @@
     </a>
   </div>
   <HelloWorld msg="Vite + Vue + Pinia + windicss + SvgIcon" />
+  <el-button type="primary" @click="toAboutPage">About</el-button>
 </template>
+
+<script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const toAboutPage = () => {
+  router.push({ name: 'About' })
+}
+</script>
 
 <style lang="scss" scoped>
 .logo {
